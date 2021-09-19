@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div id="top">
+    <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1631024675/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC2843_rmomnj.jpg"/>
+    <p>Contact</p>
+</div>
+
+<div class="blog-body">
+    <div class="thankyou">
+        <h1>お問い合わせいただき、ありがとうございます。</h1>
+        <p>お問い合わせ内容確認後、数日中に返答させていただきます。</p>
+    </div>
+    <a href="{% url 'index' %}" class="back-btn">←戻る</a>
+</div>
+
+{% endblock %}

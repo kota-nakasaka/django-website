@@ -1,0 +1,23 @@
+<div id="nav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/landscape">Landscape</a></li>
+        <li><a href="/portrait">Portrait</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/aboutme">About me</a></li>
+    </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+      $(function () {
+        $(window).scroll(function () {
+         if ($(this).scrollTop() > 10) {
+         $('#nav').addClass('fixed');
+        } else {
+         $('#nav').removeClass('fixed');
+        }
+      });
+    });
+</script>

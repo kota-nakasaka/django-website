@@ -1,0 +1,79 @@
+{% extends 'blog/base.html' %}
+
+
+
+{% block content %}
+
+<div id="top">
+    <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625299197/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC4585_yvcqyg.jpg" />
+    <p>About Me</p>
+</div>
+  
+<div id="content">
+    <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625866760/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/IMG_4115_snzlpo.jpg" />
+    
+    <div class="content-block">
+      
+        <div id="profile">
+            <h1>profile</h1>
+            <p>
+            名前: 中坂　倖大
+            <br>
+            生年月日: 1996年12月17日
+            <br>
+            拠点:　愛知県名古屋市
+            <br>
+            カメラ:　SONY a7ii / フィルムカメラ
+            <br>
+            趣味:　登山、キャンプ、温泉、音楽（バンド）
+            <br>
+            </p>
+        </div>
+
+        <div id="story">
+            <h1>story</h1>
+            <p>
+            北海道森町に生まれる。
+            <br>
+            中学を卒業するまでの15年間を森町で過ごす。
+            <br>
+            高校入学時、北海道函館市へ。
+            <br>
+            機械系学科を学び、高校卒業後に愛知県の会社へ就職。
+            <br>
+            元々、アウトドアや旅行が好きだったため
+            <br>
+            思い出を綺麗に残したいと思いカメラを購入。
+            <br>
+            趣味で楽しんでいたカメラだったが、
+            <br>
+            いつしかカメラと掛け合わせたスキルを身に付けて
+            <br>
+            仕事がしたいと思うようになり、
+            <br>
+            6年務めた会社を退職し、現在プログラミングを勉強中。
+            </p>
+        </div>
+    
+    </div>
+
+</div>
+
+
+<script>
+    $(function(){
+    $('.content-block').css('visibility','hidden');
+    $(window).scroll(function(){
+     var windowHeight = jQuery(window).height(),
+       topWindow = jQuery(window).scrollTop();
+     $('.content-block').each(function(){
+      var targetPosition = jQuery(this).offset().top;
+      if(topWindow > targetPosition - windowHeight + 200){
+      jQuery(this).addClass("fadeInDown");
+      }
+    });
+   });
+  })
+</script>
+
+{% endblock %}

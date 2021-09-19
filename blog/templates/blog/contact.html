@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div id="top">
+    <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1631024675/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC2843_rmomnj.jpg"/>
+    <p>Contact</p>
+</div>
+
+<div class="blog-body">
+    <div class="contact">
+        <h1 class="contact-title">お問い合わせ</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table class="contact-form">
+                {{ form.as_table }}
+            </table>
+            <br>
+            <div class="form-actions">
+                <button type="submit">送信</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

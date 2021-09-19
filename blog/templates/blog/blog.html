@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div id="top">
+    <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1631024377/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC8972_wrcsbt.jpg"/>
+    <p>BLOG</p>
+</div>
+
+{% if user.is_authenticated %}
+        <div class="post-new">
+            <h2><a href="{% url 'post_new' %}" >新規投稿</span></a></h2>
+        </div>
+{% endif %}
+
+<div class="blog-body">
+    <div class="post-list">
+        {% for post in post_data %}
+        <a href="{% url 'post_detail' post.id %}">
+            <div class="post">
+                <div class="post-title">
+                    <h3>{{ post.title }}</h3>
+                </div>
+                <div class="post-date">
+                    <p>{{ post.created|date }}</p>
+                </div>
+                {% if post.image %}
+                <img class="post-img" src="{{ post.image.url }}" alt="" />
+                {% endif %}     
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

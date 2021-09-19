@@ -1,0 +1,84 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+
+
+   <div id="slideshow">
+      <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625297950/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC8675_nuptet.jpg" alt="画像1" class="active">
+      <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625297952/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/DSC00944_xl65b4.jpg" alt="画像2">
+      <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625575222/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC3507_dtd8er.jpg" alt="画像3">
+      <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625299197/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC4686_pzplao.jpg" alt="画像3">
+      <img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625298531/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC4774_nndmia.jpg" alt="画像4">
+   </div>
+
+   <script type="text/javascript">
+      function slideSwitch() {
+      var $active = $('#slideshow img.active');
+   
+      if ( $active.length == 0 ) $active = $('#slideshow img:last');
+   
+      var $next =  $active.next().length ? $active.next()
+         : $('#slideshow img:first');
+   
+      $active.addClass('last-active');
+   
+      $next.css({opacity: 0.0})
+         .addClass('active')
+         .animate({opacity: 1.0}, 3000, function() {
+               $active.removeClass('active last-active');
+         });
+   }
+   
+   $(function() {
+      setInterval( "slideSwitch()", 7000 );
+   });  
+   </script>
+
+
+   <div class="content">
+   <h1>WELCOME TO MY PAGE!!</h1>
+      <p>
+         ふとしたきっかけで手にしたカメラ。
+         <br>
+         それが僕の人生を大きく変えた。
+         <br>
+         カメラがあったから見えた世界。
+         <br>
+         カメラがあったから訪れた場所。
+         <br>
+         カメラがあったから出会えた人。
+         <br>
+         そんな僕の物語を紡ぐ。
+         <br>
+         美しい人生を！
+         <br>
+      </p>
+   </div>
+
+   <div id="footer-gallery">
+      <p>gallery</p>
+   </div>
+
+   <div class="slider">
+      <li><img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625160665/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC0481_p8uuky.jpg" /></li>
+      <li><img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625299198/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC4564_tzcoru.jpg" /></li>
+      <li><img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1623827163/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC9687_Original_mrzj0c.jpg" /></li>
+      <li><img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625299198/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC4056_wdpdaa.jpg" /></li>
+      <li><img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625299197/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC3404_y0wvvk.jpg" /></li>
+      <li><img src="https://res.cloudinary.com/dvufpb4vx/image/upload/v1625297694/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88/_DSC4708_syu5oa.jpg" /></li>
+   </div> 
+
+
+   <script type="text/javascript" src="{% static 'js/test.js' %}"></script>
+   <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,1226 @@
+@charset "UTF-8";
+
+@media screen and (min-width:1024px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        color: #333;
+        font-size: 150%;
+        line-height: 150%;
+        background-color: black;
+    }
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* -------navbar------ */
+    #nav {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: white;
+    }
+    #nav ul{
+        display: table;
+        margin: 0 auto;
+        padding: 0 ;
+        width: 80%;
+        text-align: center;
+        line-height: 70px;
+    }
+    #nav li{
+        display: table-cell;
+        min-width: 50px;
+        height: 70px;
+    }
+    #nav a{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #555;
+        padding-bottom: 5px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 150%;
+    }
+    #nav li.current{
+        border-bottom: 3px solid #92D050;
+    }
+    #nav li:hover{
+        color: #E7DA66;
+        border-bottom: 3px solid #4d9ce6;
+    }
+
+    /* -------footer------ */
+
+    #footer {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: rgb(0, 0, 0);
+        color: #FFF;
+        font-family: 'Amatic SC', cursive;
+        font-size: 70%;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    /* -------index------- */
+
+    #slideshow {
+        position: relative;
+        width:  100%; 
+        height: 800px;
+    }
+
+    #slideshow img { 
+        position: absolute; 
+        width: 100%;
+        height: 800px;
+        top: 0;
+        left:0;
+        z-index: 8;
+        opacity: 0.0;
+        object-fit: cover;
+    }
+
+    #slideshow img.active {
+        z-index: 10;
+        opacity: 1.0;
+    }
+
+    #slideshow img.last-active {
+        z-index: 9;
+    }
+
+
+    .content {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(250, 248, 248);
+        font-size: 60%;
+        line-height: 300%;
+        letter-spacing: 5px;
+        background-color: rgb(8, 8, 8);
+    }
+
+    .content h1 {
+        margin: 50px;
+        padding: 0px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 300%;
+        text-align: center;
+    }
+
+    #footer-gallery {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        display: block;
+        background-color: whitesmoke;
+        font-family: 'Amatic SC', cursive;
+        font-size: 200%;
+        color:rgb(8, 8, 8);
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 10px;
+    }
+
+    .slider li img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* -------pagetop------- */
+
+    #top {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+
+    #top img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #top p {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        display: block;
+        background:rgba(235, 223, 223, 0.5) ;
+        font-family: 'Amatic SC', cursive;
+        font-size: 200%;
+        color:rgb(8, 8, 8);
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 10px;
+    }
+
+    /* -------aboutme------- */
+
+    #content {
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(2, 2, 2);
+        font-size: 75%;
+        line-height: 300%;
+        letter-spacing: 2px;
+        background-color: white;
+    }
+
+    #content img {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        padding: 5px;
+        width: 25%;
+        height: auto;
+
+    }
+
+    #content h1 {
+        text-align: center;
+        margin: 20px;
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        color: gray;
+        font-size: 300%;
+        line-height: 150%;
+    }
+
+    #content p {
+        margin: 50px;
+        padding: 0;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(2, 2, 2);
+        font-size: 100%;
+        line-height: 300%;
+        letter-spacing: 2px;
+
+    }
+
+    .fadeInDown {
+        -webkit-animation-fill-mode:both;
+        -ms-animation-fill-mode:both;
+        animation-fill-mode:both;
+        -webkit-animation-duration:1s;
+        -ms-animation-duration:1s;
+        animation-duration:1s;
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+        visibility: visible !important;
+    }
+    @-webkit-keyframes fadeInDown {
+        0% { opacity: 0; -webkit-transform: translateY(20px); }
+        100% { opacity: 1; -webkit-transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+        0% { opacity: 0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); }
+        100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+    }
+
+
+    /* -------landscape&portrait------- */
+
+    #gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: white;
+    }
+
+
+
+    #gallery li {
+        list-style: none;
+        padding: 2px;
+        width: calc(100%/4);
+        box-sizing: border-box;
+    }
+
+    #gallery li img {
+        max-width:100%; 
+        height: auto; 
+    }
+
+    /* -------blog------- */
+
+    .blog-body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: white;
+    }
+
+    .post-list {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .post {
+        margin: 30px;
+        background-color: white;
+        border-radius: 5px;
+        width: 280px;
+        height: 390px;
+        text-decoration: none;   
+    }
+
+    .post:hover {
+        box-shadow: 0 5px 10px black;
+        transform: translate(0, -5px);
+    }
+
+    .post-title {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        text-decoration: none;
+        color: #333;
+    }
+
+    .post-date {
+        text-align: right;
+        font-size: 60%;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .post-new {
+        background-color: white;
+        color: #333;
+        font-family: 'Kiwi Maru', serif;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .post-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .post-detaile {
+        background-color: white;
+        color: #333;
+        font-family: 'Kiwi Maru', serif;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .blog-content {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .post-detail-img {
+        width: 60%;
+        height: auto;
+        padding: 5% 20%;
+    }
+
+    .post-text {
+        font-family: 'Meiryo', 'メイリオ';
+        line-height: 3;
+        font-size: 50%;
+    }
+
+    .post-detail-title {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        font-size: 200%;
+    }
+
+    .back-btn {
+        font-size: 50%;
+        margin: 20px;
+        padding: 5px;
+        color: white;
+        background-color: #4d9ce6;
+    }
+
+
+    .back-btn:hover {
+        box-shadow: 0 5px 10px black;
+        transform: translate(0, -5px);
+    }
+
+    .post-new-content {
+        width: 50%;
+        margin: 20px auto;
+        font-size: 70%;
+    }
+
+    /* -------contact------- */
+
+    .contact {
+        font-family: 'Meiryo', 'メイリオ';
+        font-size: 50%;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .contact-title {
+        text-align: center;
+    }
+
+    .contact-form {
+        margin: 10px auto;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .thankyou {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        font-size: 70%;
+        margin: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:639px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        color: #333;
+        font-size: 150%;
+        line-height: 150%;
+        background-color: black;
+    }
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* -------navbar------ */
+    #nav {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: white;
+    }
+    #nav ul{
+        display: table;
+        margin: 0 auto;
+        padding: 0 ;
+        width: 80%;
+        text-align: center;
+        line-height: 70px;
+    }
+    #nav li{
+        display: table-cell;
+        min-width: 50px;
+        height: 70px;
+    }
+    #nav a{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #555;
+        padding-bottom: 5px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 150%;
+    }
+    #nav li.current{
+        border-bottom: 3px solid #92D050;
+    }
+    #nav li:hover{
+        color: #E7DA66;
+        border-bottom: 3px solid #4d9ce6;
+    }
+
+    /* -------footer------ */
+
+    #footer {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: rgb(0, 0, 0);
+        color: #FFF;
+        font-family: 'Amatic SC', cursive;
+        font-size: 70%;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    /* -------index------- */
+
+    #slideshow {
+        position: relative;
+        width:  100%; 
+        height: 800px;
+    }
+
+    #slideshow img { 
+        position: absolute; 
+        width: 100%;
+        height: 800px;
+        top: 0;
+        left:0;
+        z-index: 8;
+        opacity: 0.0;
+        object-fit: cover;
+    }
+
+    #slideshow img.active {
+        z-index: 10;
+        opacity: 1.0;
+    }
+
+    #slideshow img.last-active {
+        z-index: 9;
+    }
+
+
+    .content {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(250, 248, 248);
+        font-size: 60%;
+        line-height: 300%;
+        letter-spacing: 5px;
+        background-color: rgb(8, 8, 8);
+    }
+
+    .content h1 {
+        margin: 50px;
+        padding: 0px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 300%;
+        text-align: center;
+    }
+
+    #footer-gallery {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        display: block;
+        background-color: whitesmoke;
+        font-family: 'Amatic SC', cursive;
+        font-size: 200%;
+        color:rgb(8, 8, 8);
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 10px;
+    }
+
+    .slider li img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* -------pagetop------- */
+
+    #top {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+
+    #top img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #top p {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        display: block;
+        background:rgba(235, 223, 223, 0.5) ;
+        font-family: 'Amatic SC', cursive;
+        font-size: 200%;
+        color:rgb(8, 8, 8);
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 10px;
+    }
+
+    /* -------aboutme------- */
+
+    #content {
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(2, 2, 2);
+        font-size: 75%;
+        line-height: 300%;
+        letter-spacing: 2px;
+        background-color: white;
+    }
+
+    #content img {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        padding: 5px;
+        width: 25%;
+        height: auto;
+
+    }
+
+    #content h1 {
+        text-align: center;
+        margin: 20px;
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        color: gray;
+        font-size: 300%;
+        line-height: 150%;
+    }
+
+    #content p {
+        margin: 50px;
+        padding: 0;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(2, 2, 2);
+        font-size: 60%;
+        line-height: 300%;
+        letter-spacing: 2px;
+
+    }
+
+    .fadeInDown {
+        -webkit-animation-fill-mode:both;
+        -ms-animation-fill-mode:both;
+        animation-fill-mode:both;
+        -webkit-animation-duration:1s;
+        -ms-animation-duration:1s;
+        animation-duration:1s;
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+        visibility: visible !important;
+    }
+    @-webkit-keyframes fadeInDown {
+        0% { opacity: 0; -webkit-transform: translateY(20px); }
+        100% { opacity: 1; -webkit-transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+        0% { opacity: 0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); }
+        100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+    }
+
+
+    /* -------landscape&portrait------- */
+
+    #gallery {
+        margin: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: white;
+    }
+
+
+
+    #gallery li {
+        list-style: none;
+        padding: 2px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #gallery li img {
+        max-width:100%; 
+        height: auto; 
+    }
+
+    /* -------blog------- */
+
+    .blog-body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: white;
+    }
+
+    .post-list {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .post {
+        margin: 30px;
+        background-color: white;
+        border-radius: 5px;
+        width: 280px;
+        height: 390px;
+        text-decoration: none;   
+    }
+
+    .post:hover {
+        box-shadow: 0 5px 10px black;
+        transform: translate(0, -5px);
+    }
+
+    .post-title {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        text-decoration: none;
+        color: #333;
+    }
+
+    .post-date {
+        text-align: right;
+        font-size: 60%;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .post-new {
+        background-color: white;
+        color: #333;
+        font-family: 'Kiwi Maru', serif;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .post-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .post-detaile {
+        background-color: white;
+        color: #333;
+        font-family: 'Kiwi Maru', serif;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .blog-content {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .post-detail-img {
+        width: 60%;
+        height: auto;
+        padding: 5% 20%;
+    }
+
+    .post-text {
+        font-family: 'Meiryo', 'メイリオ';
+        line-height: 3;
+        font-size: 50%;
+    }
+
+    .post-detail-title {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        font-size: 200%;
+    }
+
+    .back-btn {
+        font-size: 50%;
+        margin: 20px;
+        padding: 5px;
+        color: white;
+        background-color: #4d9ce6;
+    }
+
+
+    .back-btn:hover {
+        box-shadow: 0 5px 10px black;
+        transform: translate(0, -5px);
+    }
+
+    .post-new-content {
+        width: 50%;
+        margin: 20px auto;
+        font-size: 70%;
+    }
+
+    /* -------contact------- */
+
+    .contact {
+        font-family: 'Meiryo', 'メイリオ';
+        font-size: 50%;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .contact-title {
+        text-align: center;
+    }
+
+    .contact-form {
+        margin: 10px auto;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .thankyou {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        font-size: 70%;
+        margin: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width:640px) and (max-width:1023px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        color: #333;
+        font-size: 150%;
+        line-height: 150%;
+        background-color: black;
+    }
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* -------navbar------ */
+    #nav {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: white;
+    }
+    #nav ul{
+        display: table;
+        margin: 0 auto;
+        padding: 0 ;
+        width: 80%;
+        text-align: center;
+        line-height: 70px;
+    }
+    #nav li{
+        display: table-cell;
+        min-width: 50px;
+        height: 70px;
+    }
+    #nav a{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #555;
+        padding-bottom: 5px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 150%;
+    }
+    #nav li.current{
+        border-bottom: 3px solid #92D050;
+    }
+    #nav li:hover{
+        color: #E7DA66;
+        border-bottom: 3px solid #4d9ce6;
+    }
+
+    /* -------footer------ */
+
+    #footer {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: rgb(0, 0, 0);
+        color: #FFF;
+        font-family: 'Amatic SC', cursive;
+        font-size: 70%;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    /* -------index------- */
+
+    #slideshow {
+        position: relative;
+        width:  100%; 
+        height: 800px;
+    }
+
+    #slideshow img { 
+        position: absolute; 
+        width: 100%;
+        height: 800px;
+        top: 0;
+        left:0;
+        z-index: 8;
+        opacity: 0.0;
+        object-fit: cover;
+    }
+
+    #slideshow img.active {
+        z-index: 10;
+        opacity: 1.0;
+    }
+
+    #slideshow img.last-active {
+        z-index: 9;
+    }
+
+
+    .content {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(250, 248, 248);
+        font-size: 60%;
+        line-height: 300%;
+        letter-spacing: 5px;
+        background-color: rgb(8, 8, 8);
+    }
+
+    .content h1 {
+        margin: 50px;
+        padding: 0px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 300%;
+        text-align: center;
+    }
+
+    #footer-gallery {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        display: block;
+        background-color: whitesmoke;
+        font-family: 'Amatic SC', cursive;
+        font-size: 200%;
+        color:rgb(8, 8, 8);
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 10px;
+    }
+
+    .slider li img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* -------pagetop------- */
+
+    #top {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+
+    #top img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #top p {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        display: block;
+        background:rgba(235, 223, 223, 0.5) ;
+        font-family: 'Amatic SC', cursive;
+        font-size: 200%;
+        color:rgb(8, 8, 8);
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 10px;
+    }
+
+    /* -------aboutme------- */
+
+    #content {
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(2, 2, 2);
+        font-size: 75%;
+        line-height: 300%;
+        letter-spacing: 2px;
+        background-color: white;
+    }
+
+    #content img {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        padding: 5px;
+        width: 25%;
+        height: auto;
+
+    }
+
+    #content h1 {
+        text-align: center;
+        margin: 20px;
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        color: gray;
+        font-size: 300%;
+        line-height: 150%;
+    }
+
+    #content p {
+        margin: 50px;
+        padding: 0;
+        text-align: center;
+        font-family: 'Kiwi Maru', serif;
+        color: rgb(2, 2, 2);
+        font-size: 60%;
+        line-height: 300%;
+        letter-spacing: 2px;
+
+    }
+
+    .fadeInDown {
+        -webkit-animation-fill-mode:both;
+        -ms-animation-fill-mode:both;
+        animation-fill-mode:both;
+        -webkit-animation-duration:1s;
+        -ms-animation-duration:1s;
+        animation-duration:1s;
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+        visibility: visible !important;
+    }
+    @-webkit-keyframes fadeInDown {
+        0% { opacity: 0; -webkit-transform: translateY(20px); }
+        100% { opacity: 1; -webkit-transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+        0% { opacity: 0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); }
+        100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+    }
+
+
+    /* -------landscape&portrait------- */
+
+    #gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: white;
+    }
+
+
+
+    #gallery li {
+        list-style: none;
+        padding: 2px;
+        width: calc(100%/2);
+        box-sizing: border-box;
+    }
+
+    #gallery li img {
+        max-width:100%; 
+        height: auto; 
+    }
+
+    /* -------blog------- */
+
+    .blog-body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: white;
+    }
+
+    .post-list {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .post {
+        margin: 30px;
+        background-color: white;
+        border-radius: 5px;
+        width: 280px;
+        height: 390px;
+        text-decoration: none;   
+    }
+
+    .post:hover {
+        box-shadow: 0 5px 10px black;
+        transform: translate(0, -5px);
+    }
+
+    .post-title {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        text-decoration: none;
+        color: #333;
+    }
+
+    .post-date {
+        text-align: right;
+        font-size: 60%;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .post-new {
+        background-color: white;
+        color: #333;
+        font-family: 'Kiwi Maru', serif;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .post-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .post-detaile {
+        background-color: white;
+        color: #333;
+        font-family: 'Kiwi Maru', serif;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .blog-content {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .post-detail-img {
+        width: 60%;
+        height: auto;
+        padding: 5% 20%;
+    }
+
+    .post-text {
+        font-family: 'Meiryo', 'メイリオ';
+        line-height: 3;
+        font-size: 50%;
+    }
+
+    .post-detail-title {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        font-size: 200%;
+    }
+
+    .back-btn {
+        font-size: 50%;
+        margin: 20px;
+        padding: 5px;
+        color: white;
+        background-color: #4d9ce6;
+    }
+
+
+    .back-btn:hover {
+        box-shadow: 0 5px 10px black;
+        transform: translate(0, -5px);
+    }
+
+    .post-new-content {
+        width: 50%;
+        margin: 20px auto;
+        font-size: 70%;
+    }
+
+    /* -------contact------- */
+
+    .contact {
+        font-family: 'Meiryo', 'メイリオ';
+        font-size: 50%;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .contact-title {
+        text-align: center;
+    }
+
+    .contact-form {
+        margin: 10px auto;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .thankyou {
+        text-align: center;
+        font-family: 'YuMincho', '游明朝体';
+        font-size: 70%;
+        margin: 50px;
+        padding-bottom: 50px;
+    }
+}
